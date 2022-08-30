@@ -1,0 +1,120 @@
+[class="aboutmep"]    {
+    font-style: italic;
+}
+
+/* atributes get [],classes get the "dot" .class , ids get # */
+/* you need better names - might be a good idea to ask mentor for opinion on naming */
+
+#specialaboutmep {
+    font-size: larger;
+}
+
+.aboutmesectionclass {
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#aboutmesectionid {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#aboutmelist1 {
+    font-stretch: expanded;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ 
+.aboutmerlistanon > li{
+    font-size: 12px;
+    font-weight: lighter;
+    font-style: italic;
+    flex: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contactmepreformtext {
+    font-weight: bold;
+    flex-direction: column-reverse;
+}
+
+.contactmeformtext > label {
+    color:rgb(68, 78, 87);
+    font-size: 18px;
+    background-color: antiquewhite;
+}
+
+input:focus, select:focus {
+    border-radius: 2px;
+    border-color: black;
+    border-style: groove;
+}
+
+/* pseudo classes work with combinators too*/
+
+article p::first-letter {
+    font-weight: bold;
+    font-size: larger;
+}
+
+
+/* Here begins better structuring */
+
+nav{
+    position: sticky;
+    display: flex grid;    
+    margin: 1px;
+    border-style: solid;
+    top:0;
+    background-color: rgba(95, 255, 202, 0.845);
+    flex-wrap: wrap;
+    margin-left:50%;
+    padding-left: 1rem;
+}
+
+nav li{
+    list-style-type: none;
+
+}
+
+#photo {
+    display: inline-flex;
+    position: absolute;
+    top: 10%;
+
+}
+body {
+    border: 0.025em solid black;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding: 3%;
+}
+
+.field {
+    margin-bottom: 1.25rem;
+}
+
+.importantem {
+    max-width: fit-content;
+    padding: 1rem;
+    border: 0.20rem;
+    display: flex;
+    border-color: black;
+    border-style: solid;
+    background-color: crimson;
+    text-align: center;
+    text-shadow: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+}
+
+.button {
+    font-family:'Times New Roman', Times, serif;
+    color:black;
+}
+
+.button:hover {
+    background-color: crimson;
+    transition: background-color 0.2s;
+}
