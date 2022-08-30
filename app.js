@@ -3,10 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+//added code 
+var fs = require('fs');
+
 
 var indexRouter = require('./routes');
 var usersRouter = require('./routes/users');
 
+// added code
 var app = express();
 
 const PORT = process.env.PORT || 5000;
@@ -47,5 +51,5 @@ express()
   .get('/', (req, res) => res.render('pages/index'))
   .get('/cool', (req, res) => res.send(cool()))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
-  
+
 module.exports = app;
