@@ -8,8 +8,9 @@
 	<meta content="www.danserban.ro" property="og:url">
 	<meta content="DanSerban.ro - un site pentru cand Dan face treaba. Uneori HRist. Uneori ITist. Uneori si psiholog :)" property="og:description">
 	<meta content="https://media-exp1.licdn.com/dms/image/D4D35AQEuxd6ujlDKwQ/profile-framedphoto-shrink_400_400/0/1658328760181?e=1659448800&v=beta&t=qgT8qovZ-maFIz-VQyTUc0H9XqDzVAVPOMD5SloXXGw" property="og:image">
-	<link href="stylesheets/normalize.css" rel="stylesheet">
-	<link href="stylesheets/styles2.css" rel="stylesheet">
+	<link href="public/stylesheets/normalize.css" rel="stylesheet">
+	<link href="public/stylesheets/styles2.css" rel="stylesheet">
+	<!-- REMOVE PUBLIC FROM STYLESHEETS BEFORE DEPLOY-->
 	<meta content="width=device-width, initial-scale=1 viewport=fit=cover" name="viewport">
     <!-- Favicon -->
 	<link href="img/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
@@ -41,6 +42,14 @@
 	</header>
 	<nav class="navbar">
 		<ul class="navbar-nav">
+			<li class="nav-item">
+					<div class="switch">
+						<input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+						<label for="language-toggle"></label>
+						<span class="on">RO</span>
+						<span class="off">EN</span>
+					</div>
+			</li>
 			<li class="nav-item">
 				<a href="https://github.com/DDSNA" class="nav-link">
 					<svg
