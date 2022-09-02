@@ -349,4 +349,7 @@ main h2:hover {
         margin-left: 1rem;
         margin-right: 1rem;
     }
+    .services h2 :first {
+        margin-top: 1rem;
+    }
 }
