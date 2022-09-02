@@ -249,10 +249,8 @@ main h2:hover {
 }
 
 /* about me */
+/* 451-590 */
 
-.aboutme {
-    display: grid;
-}
 
 .aboutme h3 {
     padding-left: 1.1%;
@@ -277,6 +275,15 @@ main h2:hover {
     background-color: rgb(81, 27, 108);
     transition: 0.2s;
     color: antiquewhite;
+}
+
+#aboutmecontainer {
+    display: grid;
+    grid-template-columns: [spacing] 1fr [boxtitle] 1fr [boxcontent] 1fr [spacing2] 1fr;
+    grid-template-rows: [row1] 1fr [row2] 1fr;
+    grid-template-areas: 
+    "spacing boxtitle boxcontent spacing2"
+    "spacing boxtitle boxcontent spacing2";
 }
 
 /*contact me*/
