@@ -268,13 +268,16 @@ main h2:hover {
     color: antiquewhite;
 }
 
+
 #aboutmecontainer {
     display: grid;
-    grid-template-columns: [spacing] 1fr [boxtitle] 1fr [boxcontent] 1fr [spacing2] 1fr;
-    grid-template-rows: [row1] 1fr [row2] 1fr;
+    grid-auto-flow: column;
+    grid-template-columns: [spacing] 1fr [boxtitle] 1fr [boxcontent] 1fr;
     grid-template-areas: 
-    "spacing boxtitle boxcontent spacing2"
-    "spacing boxtitle boxcontent spacing2";
+    "spacing boxtitle boxcontent"
+    "spacing boxtitle boxcontent";
+    align-items: stretch;
+    justify-items: center;
 }
 
 /*contact me*/
@@ -334,6 +337,14 @@ footer p:first-of-type {
     footer {
         margin: 0;
         padding: 0;
+    }
+
+    .services h2 {
+        padding-top: 3%;
+    }
+
+    :root {
+        font-size: 14.3px;
     }
 
 }
