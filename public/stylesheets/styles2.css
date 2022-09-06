@@ -16,6 +16,8 @@ main {
     --transition-speed: 500ms;
     --textbg-primary:rgb(220,220,220);
     --textbg-secondary:rgb(255,255,255);
+    --fa-primary:coral;
+    --fa-secondary:black;
 }
 
 body::-webkit-scrollbar {
@@ -66,7 +68,6 @@ body::-webkit-scrollbar-thumb {
     transition: var(--transition-speed);
   }
   
-
 .nav-link:hover {
     filter: grayscale(0%) opacity(1);
     background: var(--bg-secondary);
@@ -83,13 +84,12 @@ body::-webkit-scrollbar-thumb {
     margin: 0 1.5rem;
   }
 
-
 .fa-primary {
-    color: coral;
+    color: var(--fa-primary);
 }
 
 .fa-secondary {
-    color: black;
+    color: var(--fa-secondary);
 }
 
 .fa-primary,
@@ -104,15 +104,12 @@ li a:hover {
 
 /* end of nav 
 beginning of main*/
-
-
 main h2 {
     font-family: 'Montserrat';
     background-color: antiquewhite;
     padding: 4px;
     
 }
-
 main h2:hover {
     color: aliceblue;
     background-color: black;
@@ -137,9 +134,6 @@ main h2:hover {
 
 /* about me */
 
-.aboutme {
-    display: grid;
-}
 
 .aboutme h3 {
     padding-left: 1.1%;
@@ -166,17 +160,51 @@ main h2:hover {
     color: antiquewhite;
 }
 
+
+#aboutmecontainer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: [spacing] 1fr [boxtitle] 1fr [boxcontent] 1fr;
+    grid-template-areas: 
+    "spacing boxtitle boxcontent"
+    "spacing boxtitle boxcontent";
+    align-items: stretch;
+    justify-items: center;
+}
+
 /*contact me*/
 
-#contactme p:hover{
+.contactmecontainer {
+    object-position: top;
+}
+
+.contactmecontainer > * {
+    margin-left: 1%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+#contactme p:hover {
     background-color: #23232e;
     color:aliceblue;
     transition: 0.3s;
 }
-
-#contactme p{
+#contactme p {
     display: flex;
     max-width: fit-content;
+}
+
+/* footer */
+footer {
+    margin-top: 0;
+    padding-top: 2%;
+    background-color: whitesmoke;
+    border-bottom: 3px solid black;
+}
+
+footer p:first-of-type {
+    margin-top: 0;
+    padding-top: 1%;
+    border-top: 3px solid black;
 }
 
 /* small screens */
@@ -206,6 +234,19 @@ main h2:hover {
         margin: 0;
         padding: 0;
     }
+    footer {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    .services h2 {
+        padding-top: 3%;
+    }
+
+    :root {
+        font-size: 14.3px;
+    }
+
 }
 
 /* large screens */
@@ -232,8 +273,16 @@ main h2:hover {
         padding:0;
         margin-left: 5rem;
     }
+    footer {
+        padding-top: 15px;
+        margin:0;
+        margin-left: 5rem;
+    }
     .aboutme p,.services p {
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+    .services h2 :first {
+        margin-top: 1rem;
     }
 }
