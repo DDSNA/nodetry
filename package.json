@@ -61,6 +61,7 @@
     "mime-types": "^2.1.35",
     "minimist": "^1.2.6",
     "mkdirp": "^0.5.6",
+    "mongodb": "^4.9.1",
     "morgan": "^1.9.1",
     "ms": "^2.0.0",
     "negotiator": "^0.6.3",

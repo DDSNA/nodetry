@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
 //added code 
 var fs = require('fs');
 
@@ -52,4 +53,41 @@ express()
   .get('/cool', (req, res) => res.send(cool()))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
+
+	// we'll add code here soon
+/**
+ * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
+ * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
+ */
+
+ var MongoClient = require('mongodb').MongoClient;
+
+ // Connect to the db
+ MongoClient.connect("mongodb+srv://weblogin:pVAS41EoXr0J7MRH@webdb.wocgjn8.mongodb.net/test?retryWrites=true&w=majority", function (err, db) {
+    
+      if(err) throw err;
+
+    });
+      //Write databse Insert/Update/Query code here..
+                 
+//async function main() {
+//   const uri = "mongodb+srv://danadmin:1l4gNTYBgOz6vWsr@webdb.wocgjn8.mongodb.net/test?retryWrites=true&w=majority";
+//   const client = new MongoClient(uri);
+//   try {
+//     await client.connect();
+
+//     await listDatabases(client);
+ 
+//   } catch (e) {
+//     console.error(e);
+//   }
+//   finally {
+//     await client.close();
+//   } 
+
+// }//  
+
+
+
 module.exports = app;
+
