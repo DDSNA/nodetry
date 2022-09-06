@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const {MongoClient} = require('mongodb');
+
 //added code 
 var fs = require('fs');
 
@@ -52,4 +54,18 @@ express()
   .get('/cool', (req, res) => res.send(cool()))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
+// mongodb
+
+async function main() {
+	// we'll add code here soon
+};
+
+/**
+ * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
+ * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
+ */
+ const uri = "mongodb+srv://dan:1l4gNTYBgOz6vWsr@webdb.wocgjn8.mongodb.net/test?retryWrites=true&w=majority";
+
+
 module.exports = app;
+
