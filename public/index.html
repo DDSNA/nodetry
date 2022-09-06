@@ -48,14 +48,6 @@
 	<nav class="navbar">
 		<ul class="navbar-nav">
 			<li class="nav-item">
-					<div class="switch">
-						<input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
-						<label for="language-toggle"></label>
-						<span class="on">RO</span>
-						<span class="off">EN</span>
-					</div>
-			</li>
-			<li class="nav-item">
 				<a href="https://github.com/DDSNA" class="nav-link">
 					<svg
 					  aria-hidden="true"
@@ -241,54 +233,56 @@
 		</section>
 		<section id="contactme">
 			<h2 class="contactmeheading">Get in touch with me!</h2>
-			<article>
-				<p class="contactmepreformtext"> Lovely to see you're interested in me!</p>
-				<p>You may contact me at the form below:</p>
-			</article>
-			<form action="contactmeupload.html" method="POST">
-			<p class="field"><label for="name">Name</label>
+			<container class="contactmecontainer">
+				<article>
+					<p class="contactmepreformtext"> Lovely to see you're interested in me!</p>
+					<p>You may contact me at the form below:</p>
+				</article>
+				<form action="contactmeupload.html" method="POST">
+				<p class="field"><label for="name">Name: </label>
 				<input type="text" id="name" name="name">
-			</p>
-			<p class="field">
-				<label for="email">Email</label>
-				<input type="text" id="email" name="email">
-			</p>
-				<button class="button" type="submit">Send your contact data to me!</button>
-			</form>
+				</p>
+				<p class="field">
+					<label for="email">Email: </label>
+					<input type="text" id="email" name="email">
+				</p>
+					<button class="button" type="submit">Send your contact data to me!</button>
+				</form>
 
-			<article>
-				<p class="contactmepreformtext">Why are you contacting me? (this is simply for categorization)</p>
-			</article>
-			<form action="contactmereason" method="post">
-				<label for="contactmereasontext">Reason (drops down)</label>
-				<select name="contactreasons" id="contactreasons">
-					<option value="JobInterview">Job Interview</option>
-					<option value="PressInterview">Press Interview</option>
-					<option value="HRConsultation">HR Consultation</option>
-					<option value="Internshipoffer">Internship offer</option>
-					<option other="Other">Other</option>
-				</select>
-			</form>
-			<article>
-				<p class="contactmepreformtext field">
-					When should I contact you back?
-				</p>
-				<p class="field">Choose one of the options below:
-				</p>
-			</article>
-			<form class="contactmeformtext" action="doathing2.html" method="POST">
-				<input type="radio" id="contactweekworkhours" name="contactform" value="contactweekworkhours">
-				<label for="contactweekworkhours"> During work week - within working hours (8AM - 5PM)</label><br>
-				<input type="radio" id="contactweeknoworkhours" name="contactform" value="contactweeknoworkhours">
-				<label for="contactweeknoworkhours"> During work week - outside working hours (5PM - 7:30PM)</label><br>
-				<input type="radio" id="contactweekeekend" name="contactform" value="contactweekend">
-				<label for="contactweekeekend"> Weekend (10AM - 2PM with prior text confirmation)</label><br>
-				<input type="radio" id="contactasap" name="contactform" value="contactasap">
-				<label for="contactasap">As soon as possible</label>
-				<br>
-				<br>
-				<!-- Here may be worth some distancing-related css soon it kinda looks bad-->	
-				<button class="button" type="submit">Tell me when to contact you! :)</button>
+				<article>
+					<p class="contactmepreformtext">Why are you contacting me? (this is simply for categorization)</p>
+				</article>
+				<form action="contactmereason" method="post">
+					<label for="contactmereasontext">Reason (drops down)</label>
+					<select name="contactreasons" id="contactreasons">
+						<option value="JobInterview">Job Interview</option>
+						<option value="PressInterview">Press Interview</option>
+						<option value="HRConsultation">HR Consultation</option>
+						<option value="Internshipoffer">Internship offer</option>
+						<option other="Other">Other</option>
+					</select>
+				</form>
+				<article>
+					<p class="contactmepreformtext field">
+						When should I contact you back?
+					</p>
+					<p class="field">Choose one of the options below:
+					</p>
+				</article>
+				<form class="contactmeformtext" action="doathing2.html" method="POST">
+					<input type="radio" id="contactweekworkhours" name="contactform" value="contactweekworkhours">
+					<label for="contactweekworkhours"> During work week - within working hours (8AM - 5PM)</label><br>
+					<input type="radio" id="contactweeknoworkhours" name="contactform" value="contactweeknoworkhours">
+					<label for="contactweeknoworkhours"> During work week - outside working hours (5PM - 7:30PM)</label><br>
+					<input type="radio" id="contactweekeekend" name="contactform" value="contactweekend">
+					<label for="contactweekeekend"> Weekend (10AM - 2PM with prior text confirmation)</label><br>
+					<input type="radio" id="contactasap" name="contactform" value="contactasap">
+					<label for="contactasap">As soon as possible</label>
+					<br>
+					<br>
+					<!-- Here may be worth some distancing-related css soon it kinda looks bad-->	
+					<button class="button" type="submit">Tell me when to contact you! :)</button>
+			</container>
 		</section>
 		<!-- JAVASCRIPT SHED FOR TESTING removed-->
 	</main>
