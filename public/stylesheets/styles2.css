@@ -129,7 +129,18 @@ main h2:hover {
     color: white;
     transition: 0.5s;
 }
+.ghostly-button {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    border-radius: 100%;
+    background-color: coral;
+    padding: 0.2rem;
+    border: none;
+    cursor: pointer;
 
+
+}
 /* about me */
 .aboutme h3 {
     padding-left: 1.1%;
@@ -165,6 +176,7 @@ main h2:hover {
     align-items: stretch;
     justify-items: center;
 }
+
 /*contact me*/
 .contactmecontainer {
     object-position: top;
