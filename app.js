@@ -3,20 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mysql = require('mysql');
 
 //added code 
 var fs = require('fs');
 
-//added mysql code
-
-var con = mysql.createConnection({
-  host: "containers-us-west-108.railway.app",
-  user: "root",
-  password: "nE38bR3VewITIphS5sJe",
-  database: "railway"
-
-});
 
 
 var indexRouter = require('./routes');
