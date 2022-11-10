@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var usersRouter = require('./routes/users');
 
 //added code 
 var fs = require('fs');
@@ -88,7 +89,8 @@ express()
 
 // }//  
 
+// database mysql 
 
-
+app.use('/users', usersRouter);
 module.exports = app;
 
