@@ -110,7 +110,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.post('/contactmeupload', function (req, res) {
   dbConn.then(function(db) {
       delete req.body._id; // for safety reasons
-      db.collection('nameandmail').insertOne(req.body);
+      db.collection('contactmedata').insertOne(req.body);
   });    
   res.send('Data received:\n' + JSON.stringify(req.body));
 });
