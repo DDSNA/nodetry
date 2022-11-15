@@ -115,13 +115,6 @@ app.post('/contactmeupload', function (req, res) {
   res.send('Data received:\n' + JSON.stringify(req.body));
 });
 
-app.get('/view-contacts',  function(req, res) {
-  dbConn.then(function(db) {
-      db.collection('nameandmail').find({}).toArray().then(function(feedbacks) {
-          res.status(200).json(feedbacks);
-      });
-  });
-});
 
 module.exports = app;
 
