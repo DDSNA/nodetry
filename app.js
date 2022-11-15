@@ -107,6 +107,11 @@ app.listen(3000, () => {
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.resolve(__dirname, 'public')));
 
+var dbConn = MongoClient.connect("mongodb+srv://weblogin:pVAS41EoXr0J7MRH@webdb.wocgjn8.mongodb.net/test?retryWrites=true&w=majority", function (err, db) {
+    
+  if(err) throw err;
+
+});
 app.post('/contactmeupload', function (req, res) {
   dbConn.then(function(db) {
       delete req.body._id; // for safety reasons
