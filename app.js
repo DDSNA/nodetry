@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var bodyParser = require('body-parser');
 
 //added code 
 var fs = require('fs');
@@ -100,6 +101,27 @@ app.listen(3000, () => {
   console.log('Server is up on port 3000');
 });
 
+
+//added code for dbconn
+
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.static(path.resolve(__dirname, 'public')));
+
+app.post('/contactmeupload', function (req, res) {
+  dbConn.then(function(db) {
+      delete req.body._id; // for safety reasons
+      db.collection('nameandmail').insertOne(req.body);
+  });    
+  res.send('Data received:\n' + JSON.stringify(req.body));
+});
+
+app.get('/view-contacts',  function(req, res) {
+  dbConn.then(function(db) {
+      db.collection('nameandmail').find({}).toArray().then(function(feedbacks) {
+          res.status(200).json(feedbacks);
+      });
+  });
+});
 
 module.exports = app;
 
