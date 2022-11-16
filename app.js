@@ -69,7 +69,7 @@ express()
       if(err) throw err;
       db.createCollection("contactmeinfo", function (err, res){
         if (err) throw err;
-        console.log("New collection created!");
+      console.log("New collection created!");
       db.close;
       })
 
