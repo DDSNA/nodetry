@@ -64,10 +64,13 @@ express()
  var MongoClient = require("mongodb").MongoClient;
 
  // Connect to the db
- MongoClient.connect("mongodb+srv://weblogin:pVAS41EoXr0J7MRH@webdb.wocgjn8.mongodb.net/test?retryWrites=true&w=majority", function (err, db) {
+ var url = "mongodb+srv://weblogin:pVAS41EoXr0J7MRH@webdb.wocgjn8.mongodb.net/test?retryWrites=true&w=majority";
+
+ MongoClient.connect(url, function (err, db) {
     
       if(err) throw err;
-      db.createCollection("contactmeinfo", function (err, res){
+      var dbase = db.db("contactmedata")
+      dbase.createCollection("contactmeinfo", function (err, res){
         if (err) throw err;
       console.log("New collection created!");
       db.close;
