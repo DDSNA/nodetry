@@ -4,6 +4,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
+const contactme = require("./routes/contactme");
 
 //added code 
 var fs = require("fs");
@@ -70,13 +71,11 @@ express()
     
       if(err) throw err;
       var dbase = db.db("contactmedata")
-      dbase.createCollection("contactmeinfo", function (err, res){
-        if (err) throw err;
+      //dbase.createCollection("contactmeinfo", function (err, res){
+      //  if (err) throw err;
       console.log("New collection created!");
       db.close;
       })
-
-    });
       //Write databse Insert/Update/Query code here..
                  
 //async function main() {
@@ -129,6 +128,12 @@ app.post("/contactmeupload", function (req, res) {
   });    
   res.send("Data received:\n" + JSON.stringify(req.body));
 });
+
+//contactme 
+
+app.use("/contactme", contactme);
+
+
 
 
 module.exports = app;
