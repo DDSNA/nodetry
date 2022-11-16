@@ -67,6 +67,11 @@ express()
  MongoClient.connect("mongodb+srv://weblogin:pVAS41EoXr0J7MRH@webdb.wocgjn8.mongodb.net/test?retryWrites=true&w=majority", function (err, db) {
     
       if(err) throw err;
+      db.createCollection("contactmeinfo", function (err, res){
+        if (err) throw err;
+        console.log("New collection created!");
+      db.close;
+      })
 
     });
       //Write databse Insert/Update/Query code here..
