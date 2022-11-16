@@ -49,6 +49,7 @@
     "is-buffer": "^1.1.6",
     "is-promise": "^2.2.2",
     "jade": "^1.11.0",
+    "jslint": "^0.12.1",
     "jstransformer": "^0.0.2",
     "kind-of": "^3.2.2",
     "lazy-cache": "^1.0.4",
