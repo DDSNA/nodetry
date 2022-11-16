@@ -122,9 +122,10 @@ var dbConn = MongoClient.connect("mongodb+srv://weblogin:pVAS41EoXr0J7MRH@webdb.
 });
 
 app.post("/contactmeupload", function (req, res) {
+  var dbase = db.db("contactmedata")
   dbConn.then(function(db) {
       delete req.body._id; // for safety reasons
-      db.collection("contactmedata").insertOne(req.body);
+      db.collection("contactmeinfo").insertOne(req.body);
   });    
   res.send("Data received:\n" + JSON.stringify(req.body));
 });
