@@ -3,7 +3,7 @@ const express = require("express");
 let router = express.Router();
 
 router
-    .route("/contactme")
+    .route("/contactmeupload")
     .get((req,res) => {
         res.send("hi get /contactme/contactmeupload");
     })
