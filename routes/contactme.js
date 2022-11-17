@@ -22,6 +22,12 @@ router
     })
     .post((req,res) => {
         res.send("hi post /contactme/contactmeupload")
+        if (err) {
+            res.status(400).send("error with post")
+            req.status(400).send("error with post req not res!")
+        } else {
+            res.json(result);
+        }
         let info = new info
     })
 
