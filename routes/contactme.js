@@ -1,11 +1,13 @@
 "use strict";
 const express = require("express");
-const send = require("send");
+let send = require("send");
 let router = express.Router();
+const dbConnect = dbo.getDb();
 
 router
     .route("/contactmeupload")
     .get(async (req,res) => {
+        dbConnect.collection("contactmeinfo")
         res.send("hi get /contactme/contactmeupload");
         req.assert("name", "Name is required").notEmpty()
         req.assert("email", "Email is required").isEmail()
