@@ -2,7 +2,6 @@
 const express = require("express");
 let send = require("send");
 let router = express.Router();
-const dbConnect = dbo.getDb();
 
 router
     .route("/contactmeupload")
