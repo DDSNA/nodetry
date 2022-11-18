@@ -4,7 +4,7 @@ let send = require("send");
 let router = express.Router();
 
 router
-    .route("/contactmeupload")
+    .route("/public/contactmeupload")
     .get(async (req,res) => {
         dbConnect.collection("contactmeinfo")
         res.send("hi get /contactme/contactmeupload");
