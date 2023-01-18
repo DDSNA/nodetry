@@ -10,8 +10,8 @@ var fs = require('fs');
 
 
 
-var indexRouter = require('./routes');
-var usersRouter = require('./routes/users');
+//var indexRouter = require('./routes');
+//var usersRouter = require('./routes/users');
 
 // added code
 var app = express();
